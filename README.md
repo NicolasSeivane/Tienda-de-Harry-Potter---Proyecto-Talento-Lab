@@ -3,6 +3,8 @@
 Bienvenido/a a **la Tienda de Harry Potter**, un proyecto web desarrollado para el curso de **Talento Lab**.  
 Este sitio está inspirado en el **Mundo Mágico de J.K. Rowling** e incluye secciones interactivas, un diseño responsivo y referencias encantadas para los fans de Hogwarts. ⚡
 
+
+https://nicolasseivane.github.io/Tienda-de-Harry-Potter---Proyecto-Talento-Lab/
 ---
 
 ## 🧱 Estructura del Proyecto
