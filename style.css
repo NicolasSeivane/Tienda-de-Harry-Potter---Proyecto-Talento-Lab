@@ -1,0 +1,289 @@
+body { /* Fuente base de Google Fonts */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #1B4D30; /* Color de fondo general */
+    background-image: url('./img/fondo.jpeg');
+    background-size: contain;          /* La imagen cubre todo el fondo */
+    background-repeat: no-repeat;    /* No se repite */
+    background-position: top center;     /* Centra la imagen */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
+}
+
+/* Estilos de Tipografía y Contenido */
+h1, h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Cinzel Decorative', cursive;
+
+}
+
+section {
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #ffffff60;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/*
+==================================================
+3. Estilos para Header, Footer y Navegación
+==================================================
+*/
+
+/* 3. Estilos básicos aplicados a las secciones de header [31] */
+.header {
+    /* 3. Propiedades de background (color) [32] */
+    background-color: #1A472A; 
+    color: #1A472A;
+    padding: 20px 0;
+    text-align: center;
+    border: 2px solid #ffffff60;
+}
+
+/* 5. Lista de navegación: Estilos para la barra de navegación [11, 33] */
+.nav {
+    margin-top: 10px;
+}
+
+.nav__lista {
+    list-style: none; /* Quita las viñetas */
+    padding: 0;
+    
+    /* Usando Flexbox para distribuir los ítems de navegación horizontalmente [33] */
+    display: flex; 
+    justify-content: center; /* Centra los enlaces */
+    gap: 30px; /* Espacio entre los elementos de la lista */
+}
+
+.nav__enlace {
+    color: #AAAAAA;
+    text-decoration: none; /* Quita el subrayado de los enlaces [11] */
+    font-weight: 700;
+    padding: 5px 10px;
+    transition: color 0.3s; /* Para un efecto suave al pasar el mouse [34] */
+}
+
+.nav__enlace:hover {
+    color: #ffffff; /* Cambia el color al pasar el mouse */
+}
+
+/* 3. Estilos básicos aplicados al footer [31] */
+.footer {
+    /* 3. Propiedades de background (color) [32] */
+    background-color: rgba(33, 97, 60, 0.6);
+    color: #000000;;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    border: 2px solid #ffffff60;
+}
+
+/*
+==================================================
+5. Estilos Multimedia
+==================================================
+*/
+
+.intro-multimedia {
+    /* 3. Propiedades de background (degradado) [32]. EJEMPLO DE FONDO GRADIENTE */
+background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 0.6) 100%);    color: #C0C0C0;
+    width: 100%;
+    max-width: 1200px;  /* o lo que prefieras */
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.imagen-principal {
+    width: 50%;     /* Cambialo según cuánto más grande la querés */
+    max-width: 700px;  /* Límite máximo */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 30px;
+    /* Asegura que el iframe sea responsivo */
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    max-width: 100%;
+}
+
+
+/*
+==================================================
+4. Diseño Responsivo con Flexbox (Sección Productos)
+==================================================
+*/
+
+.seccion-productos {
+    background-color: #C0C0C0;
+    border: 2px solid #ffffff60;
+}
+
+
+/* Contenedor Flex para la sección "Productos" [22, 35] */
+.productos-container {
+    display: flex;
+    flex-direction: row; /* Dirección por defecto (fila) [36] */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en líneas inferiores [35, 36] */
+    justify-content: center; /* Centra las tarjetas en el eje principal [36] */
+    gap: 30px; /* Espacio entre los elementos [35, 37] */
+    padding: 20px;
+}
+
+.producto-card {
+    /* flex: grow shrink basis. Permite que la tarjeta crezca y se encoja, 
+       con una base inicial de 300px [38, 39] */
+    flex: 1 1 300px; 
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.801);
+    text-align: center;
+}
+
+.producto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.producto-card button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*
+==================================================
+4. Diseño Responsivo con Grid (Sección Reseñas)
+==================================================
+*/
+
+.seccion-reseñas {
+    background-color: #C0C0C0;
+    border: 2px solid #ffffff60;
+}
+
+
+/* Contenedor Grid para la sección "Reseñas" [24] */
+.reseñas-grid {
+    display: grid;
+    /* Define columnas: 3 columnas de igual tamaño (1fr) por defecto en escritorio [40] */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Espacio entre las celdas del Grid [37] */
+    padding: 20px;
+}
+
+.reseña-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.637); /* Sombra para destacar [41] */
+    text-align: center;
+    transition: transform 0.3s; /* Para la interactividad (hover) [34] */
+}
+
+.reseña-card:hover {
+    transform: translateY(-5px); /* Efecto al pasar el mouse [34] */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.616);
+}
+
+.cliente {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+/*
+==================================================
+4. Diseño Responsivo con Media Queries (Sección Contacto)
+==================================================
+*/
+
+.seccion-contacto {
+    background-color: #C0C0C0;
+}
+
+.contacto-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    /* Por defecto, los inputs son elementos en línea o tienen su propio display, 
+       pero se adaptarán a la Media Query */
+}
+
+.contacto-form label,
+.contacto-form input[type="text"],
+.contacto-form input[type="email"],
+.contacto-form textarea,
+.contacto-form button {
+    display: block; /* Hace que label, input y button ocupen todo el ancho [42] */
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contacto-form button {
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 4. Diseño Responsivo: Media Query para dispositivos pequeños (hasta 768px) [30, 43] */
+@media (max-width: 768px) {
+    
+    /* Adaptación de la navegación para móviles (opcional: a columna) */
+    .nav__lista {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    
+    /* Adaptación de la sección Reseñas (Grid) a una sola columna [30, 44] */
+    .reseñas-grid {
+        grid-template-columns: 1fr; /* Una sola columna para móviles */
+    }
+
+    /* Adaptación del formulario de Contacto [45, 46] */
+    .contacto-form {
+        padding: 10px; /* Ajusta el padding general del formulario [46] */
+    }
+    
+    /* Los campos ya están configurados para 100% de ancho, pero se reitera
+       la importancia de asegurar la separación [46] */
+    .contacto-form input,
+    .contacto-form textarea {
+        width: 100%; 
+        margin-bottom: 15px; 
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Media Query para Tabletas (Ejemplo: 600px a 991px) [44] */
+@media (min-width: 600px) and (max-width: 991px) {
+    /* Adaptación de la sección Reseñas (Grid) a dos columnas para tabletas */
+    .reseñas-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
