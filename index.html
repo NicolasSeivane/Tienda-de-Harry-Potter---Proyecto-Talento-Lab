@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Proyecto Web - Talento Lab</title>
 
-    <!-- 3. Estilos Básicos Aplicados con CSS: Vinculación del archivo CSS externo (styles.css)-->
     <link rel="stylesheet" href="style.css">
     
-    <!-- 3. Estilos Básicos Aplicados con CSS: Implementación de Google Fonts . 
-         Se recomienda visitar Google Fonts, elegir una fuente (ej: Roboto) y copiar el enlace. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
@@ -17,13 +14,10 @@
 </head>
 <body>
 
-    <!-- 1. Estructura Semántica: Etiqueta <header> define la cabecera de la página  -->
     <header class="header">
         <h1>Tienda de Harry Potter (Talento Lab)</h1>
         
-        <!-- 5. Lista de Navegación: Etiqueta <nav> para la sección de navegación  -->
         <nav class="nav">
-            <!-- Lista desordenada (<ul>) con enlaces (<a>) que simulan navegación interna  -->
             <ul class="nav__lista">
                 <li><a href="#inicio" class="nav__enlace">Inicio</a></li>
                 <li><a href="#productos" class="nav__enlace">Productos</a></li>
@@ -33,143 +27,61 @@
         </nav>
     </header>
 
-    <!-- 1. Estructura Semántica: Etiqueta <main> contiene el contenido principal y único del documento [6]. -->
     <main>
 
-        <!-- 5. Contenido Multimedia: Sección de introducción con imagen y video/iframe. -->
         <section id="inicio" class="intro-multimedia">
             <h2>Bienvenidos a nuestra tienda</h2>
             <p>Aquí puedes encontrar todo lo necesario para iniciar tu aventura en el <strong>Mundo Mágico</strong> y <em>evitar un par de <strong>peligros</strong> </em></p>
 
-            <!-- Imagen (Multimedia): Etiqueta <img> con atributo alt para accesibilidad-->
             <img src="./img/foto_tienda.jpg " alt=" Imagen de la tienda (No es una tienda de varitas)" class="imagen-principal">
 
-            <!-- Video o Iframe (Multimedia): Se usa un <iframe> de YouTube como ejemplo  -->
             <div class="video-container">
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/BMlo8u56VOY?autoplay=1" 
-                    title="Video de ejemplo" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BMlo8u56VOY?autoplay=1" title="Música del Mundo Mágico de Harry Potter" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
 
 
-        <!-- 4. Diseño Responsivo con Flexbox: Sección "Productos" [22]. 
-             El contenedor principal (.productos-container) usará 'display: flex' en CSS. -->
-        <section id="productos" class="seccion-productos">
-            <h2>Nuestra Magia</h2>
-            <div class="productos-container">
-                
-                <!-- Card 1 de Producto -->
-                <article class="producto-card">
-                    <img src="/img/capa_invisibilidad.jpg" alt="Capa Invisibilidad">
-                    <h3>Capa Invisibilidad</h3>
-                    <p>Ideal para escapar de una vieja amiga...</p>
-                    <p class="precio"><strong>$5000</strong></p>
-                    <button>Agregar al caldero</button>
-                </article>
-
-                <!-- Card 2 de Producto -->
-                <article class="producto-card">
-                    <img src="./img/varitas.jpg" alt="Varitas">
-                    <h3>Varitas</h3>
-                    <p>Tu compañera/o ideal, más barato que Ollivander... </p>
-                    <p class="precio"><strong>$5</strong></p>
-                    <button>Agregar al caldero</button>
-                </article>
-
-                <!-- Card 3 de Producto -->
-                <article class="producto-card">
-                    <img src="./img/pociones.jpg" alt="Pociones">
-                    <h3>Pociones Sorpresa </h3>
-                    <p>Desde pociones Multijugos hasta Veritaserum, te atreves?</p>
-                    <p class="precio"><strong>$10</strong></p>
-                    <button>Agregar al caldero</button>
-                </article>
-
-                <article class="producto-card">
-                    <img src="./img/grageas.jpg" alt="Grageas">
-                    <h3>Bertie Bott's Every-Flavour Beans</h3>
-                    <p>Desde lo mas rico hasta lo mas asqueroso.</p>
-                    <p class="precio"><strong>$3</strong></p>
-                    <button>Agregar al caldero</button>
-                </article>
-
-                <article class="producto-card">
-                    <img src="./img/plumas.jpg" alt="Pluams">
-                    <h3>Plumas Plus </h3>
-                    <p>Escribir mil paginas nunca fue tan sencillo.</p>
-                    <p class="precio"><strong>$2</strong></p>
-                    <button>Agregar al caldero</button>
-                </article>
-
-            </div>
+        <section id="productos" class="seccion-productos">            
         </section>
 
-        <!-- 4. Diseño Responsivo con Grid: Sección "Reseñas" [23, 24]. 
-             El contenedor principal (.reseñas-grid) usará 'display: grid' en CSS. -->
+
         <section id="reseñas" class="seccion-reseñas">
-            <h2>Reseñas de Clientes</h2>
-            <div class="reseñas-grid">
-                
-                <article class="reseña-card">
-                    <p>"Pedí una nueva pluma para mis clases en Hogwarts y llegó más rápido que una lechuza de correos. ¡Excelente servicio!"</p>
-                    <p class="cliente">- Hermione Granger</p>
-                </article>
-
-                <!-- Reseña 2 -->
-                <article class="reseña-card">
-                    <p>"Compré una caja de grageas Bertie Bott y un nuevo set de quidditch. ¡Todo llegó impecable! Ni siquiera Filch podría quejarse."</p>
-                    <p class="cliente">- Fred Weasley</p>
-                </article>
-
-                <!-- Reseña 3 -->
-                <article class="reseña-card">
-                    <p>"La atención fue tan amable como la profesora McGonagall en un buen día. ¡Definitivamente volveré a comprar aquí!"</p>
-                    <p class="cliente">- Luna Lovegood</p>
-                </article>
-
-            </div>
         </section>
 
-        <!-- 2. Formulario de Contacto & 4. Diseño Responsivo con Media Queries: Sección "Contacto" [25]. -->
         <section id="contacto" class="seccion-contacto">
             <h2>¡¡ Envianos tu Lechuza !!</h2>
 
-            <!-- Formulario funcional: Usando Formspree para manejar el envío [14, 15]. 
-                 DEBES REEMPLAZAR 'https://formspree.io/f/mnqkwrjd' CON TU PROPIA URL DE FORMSPREE. -->
-            <form action="https://formspree.io/f/mnqkwrjd" method="POST" class="contacto-form">
+            <form action="https://formspree.io/f/mvgyzllg" method="POST" class="contacto-form">
                 
-                <!-- Campo Nombre (type="text") [26] -->
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
 
-                <!-- Campo Correo Electrónico (type="email") [26] -->
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" placeholder="tu.correo@ejemplo.com" required>
 
-                <!-- Campo Mensaje (textarea) [27] -->
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu carta aquí..." required></textarea>
 
-                <!-- Botón de Envío (type="submit") [26] -->
                 <button type="submit">Enviar Lechuza</button>
             </form>
         </section>
 
+        <section id="carrito" class="seccion-carrito">
+            <h2>Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <p id="total-carrito"><strong>Total:</strong> $0</p>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+        </section>
     </main>
 
-    <!-- 1. Estructura Semántica: Etiqueta <footer> para el pie de página [6]. -->
     <footer class="footer">
         <p>&copy; 2025 Mi Proyecto Web Talento Lab. Todos los derechos reservados.</p>
-        <!-- 6. Subida del Proyecto: Recordatorio para el hosting gratuito (GitHub Pages o Netlify) [28]. -->
         <p>Este proyecto está disponible en GitHub Pages.</p>
     </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/formulario.js"></script>
 
 </body>
 </html>

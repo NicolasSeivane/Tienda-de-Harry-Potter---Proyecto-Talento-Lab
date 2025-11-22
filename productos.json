@@ -1,0 +1,56 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Capa Invisibilidad",
+      "descripcion": "Ideal para escapar de una vieja amiga...",
+      "precio": 5000,
+      "imagen": "/img/capa_invisibilidad.jpg", "alt": "Imagen de capa de invisibilidad"
+    },
+    {
+      "id": 2,
+      "nombre": "Varitas",
+      "descripcion": "Tu compañera/o ideal, más barato que Ollivander...",
+      "precio": 5,
+      "imagen": "./img/varitas.jpg", "alt": "Imagen de varitas mágicas"
+    },
+    {
+      "id": 3,
+      "nombre": "Pociones Sorpresa",
+      "descripcion": "Desde pociones Multijugos hasta Veritaserum, ¿te atreves?",
+      "precio": 10,
+      "imagen": "./img/pociones.jpg", "alt": "Imagen de pociones mágicas"
+    },
+    {
+      "id": 4,
+      "nombre": "Bertie Bott's Every-Flavour Beans",
+      "descripcion": "Desde lo más rico hasta lo más asqueroso.",
+      "precio": 3,
+      "imagen": "./img/grageas.jpg", "alt": "Imagen de grageas Bertie Bott's"
+    },
+    {
+      "id": 5,
+      "nombre": "Plumas Plus",
+      "descripcion": "Escribir mil páginas nunca fue tan sencillo.",
+      "precio": 2,
+      "imagen": "./img/plumas.jpg", "alt": "Imagen de plumas mágicas"
+    }
+  ],
+  "reseñas": [
+    {
+      "id": 1,
+      "texto": "Pedí una nueva pluma para mis clases en Hogwarts y llegó más rápido que una lechuza de correos. ¡Excelente servicio!",
+      "cliente": "Hermione Granger"
+    },
+    {
+      "id": 2,
+      "texto": "Compré una caja de grageas Bertie Bott y un nuevo set de quidditch. ¡Todo llegó impecable! Ni siquiera Filch podría quejarse.",
+      "cliente": "Fred Weasley"
+    },
+    {
+      "id": 3,
+      "texto": "La atención fue tan amable como la profesora McGonagall en un buen día. ¡Definitivamente volveré a comprar aquí!",
+      "cliente": "Luna Lovegood"
+    }
+  ]
+}
