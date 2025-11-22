@@ -20,7 +20,7 @@ fetch("productos.json")
           <p>${prod.descripcion.slice(0, 50)}</p>
           <h3>$${prod.precio}</h3>
 
-          <div class="card-footer"><button class="agregar-carrito"producto-id="${prod.id}"producto-nombre="${prod.nombre}"producto-precio="${prod.precio}">Agregar al Carrito</button>
+          <div class="card-footer"><button class="agregar-carrito"producto-id="${prod.id}"producto-nombre="${prod.nombre}"producto-precio="${prod.precio}">Agregar al Caldero</button>
           </div>
         </article>
       `;
