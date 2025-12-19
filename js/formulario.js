@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".contacto-form");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // 
+        event.preventDefault(); // Evitamos el envío automático para validar los campos
 
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -36,7 +36,7 @@ function mostrarMensaje(texto, tipo) {
     let div = document.createElement("div");
     div.textContent = texto;
 
-    div.className = `mensaje ${tipo}`;  
+    div.className = `mensaje ${tipo}`;
 
     const form = document.querySelector(".contacto-form");
     form.prepend(div);

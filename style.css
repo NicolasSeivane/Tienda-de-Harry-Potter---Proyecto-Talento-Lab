@@ -1,12 +1,12 @@
-body { /* Fuente base de Google Fonts */
+body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #1B4D30; /* Color de fondo general */
+    background-color: #1B4D30;
     background-image: url('./img/fondo.jpeg');
-    background-size: contain;          /* La imagen cubre todo el fondo */
-    background-repeat: no-repeat;    /* No se repite */
-    background-position: top center;     /* Centra la imagen */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
 }
 
@@ -27,15 +27,9 @@ section {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/*
-==================================================
-3. Estilos para Header, Footer y Navegación
-==================================================
-*/
+/* --- Header, Footer y Navegación --- */
 
-/* 3. Estilos básicos aplicados a las secciones de header [31] */
 .header {
-    /* 3. Propiedades de background (color) [32] */
     background-color: #1A472A; 
     color: #1A472A;
     padding: 20px 0;
@@ -43,36 +37,31 @@ section {
     border: 2px solid #ffffff60;
 }
 
-/* 5. Lista de navegación: Estilos para la barra de navegación [11, 33] */
 .nav {
     margin-top: 10px;
 }
 
 .nav__lista {
-    list-style: none; /* Quita las viñetas */
+    list-style: none;
     padding: 0;
-    
-    /* Usando Flexbox para distribuir los ítems de navegación horizontalmente [33] */
     display: flex; 
-    justify-content: center; /* Centra los enlaces */
-    gap: 30px; /* Espacio entre los elementos de la lista */
+    justify-content: center;
+    gap: 30px;
 }
 
 .nav__enlace {
     color: #AAAAAA;
-    text-decoration: none; /* Quita el subrayado de los enlaces [11] */
+    text-decoration: none;
     font-weight: 700;
     padding: 5px 10px;
-    transition: color 0.3s; /* Para un efecto suave al pasar el mouse [34] */
+    transition: color 0.3s;
 }
 
 .nav__enlace:hover {
     color: #ffffff; /* Cambia el color al pasar el mouse */
 }
 
-/* 3. Estilos básicos aplicados al footer [31] */
 .footer {
-    /* 3. Propiedades de background (color) [32] */
     background-color: rgba(33, 97, 60, 0.6);
     color: #000000;;
     text-align: center;
@@ -81,15 +70,11 @@ section {
     border: 2px solid #ffffff60;
 }
 
-/*
-==================================================
-5. Estilos Multimedia
-==================================================
-*/
+/* --- Elementos Multimedia --- */
 
 .intro-multimedia {
-    /* 3. Propiedades de background (degradado) [32]. EJEMPLO DE FONDO GRADIENTE */
-background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 0.6) 100%);    color: #C0C0C0;
+    background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 0.6) 100%);
+    color: #C0C0C0;
     width: 100%;
     max-width: 1200px;  /* o lo que prefieras */
     margin: 0 auto;
@@ -118,11 +103,7 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
 }
 
 
-/*
-==================================================
-4. Diseño Responsivo con Flexbox (Sección Productos)
-==================================================
-*/
+/* --- Sección de Productos (Flexbox) --- */
 
 .seccion-productos {
     background-color: #C0C0C0;
@@ -133,16 +114,14 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
 /* Contenedor Flex para la sección "Productos" */
 .productos-container {
     display: flex;
-    flex-direction: row; /* Dirección por defecto (fila) */
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en líneas inferiores */
-    justify-content: center; /* Centra las tarjetas en el eje principal  */
-    gap: 30px; /* Espacio entre los elementos */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
     padding: 20px;
 }
 
 .producto-card {
-    /* flex: grow shrink basis. Permite que la tarjeta crezca y se encoja, 
-       con una base inicial de 300px */
     flex: 1 1 300px; 
     border: 1px solid #000000;
     border-radius: 8px;
@@ -167,11 +146,7 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
     border-radius: 5px;
 }
 
-/*
-==================================================
-4. Diseño Responsivo con Grid (Sección Reseñas)
-==================================================
-*/
+/* --- Sección de Reseñas (Grid) --- */
 
 .seccion-reseñas {
     background-color: #C0C0C0;
@@ -179,12 +154,10 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
 }
 
 
-/* Contenedor Grid para la sección "Reseñas"  */
 .reseñas-grid {
     display: grid;
-    /* Define columnas: 3 columnas de igual tamaño (1fr) por defecto en escritorio */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; /* Espacio entre las celdas del Grid */
+    gap: 20px; 
     padding: 20px;
 }
 
@@ -192,13 +165,13 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.637); /* Sombra para destacar [41] */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.637);
     text-align: center;
-    transition: transform 0.3s; /* Para la interactividad (hover) [34] */
+    transition: transform 0.3s;
 }
 
 .reseña-card:hover {
-    transform: translateY(-5px); /* Efecto al pasar el mouse [34] */
+    transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.616);
 }
 
@@ -208,11 +181,7 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
     margin-top: 10px;
 }
 
-/*
-==================================================
-4. Diseño Responsivo con Media Queries (Sección Contacto)
-==================================================
-*/
+/* --- Sección de Contacto --- */
 
 .seccion-contacto {
     background-color: #C0C0C0;
@@ -225,8 +194,6 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: white;
-    /* Por defecto, los inputs son elementos en línea o tienen su propio display, 
-       pero se adaptarán a la Media Query */
 }
 
 .contacto-form label,
@@ -234,7 +201,7 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
 .contacto-form input[type="email"],
 .contacto-form textarea,
 .contacto-form button {
-    display: block; /* Hace que label, input y button ocupen todo el ancho [42] */
+    display: block;
     margin-bottom: 15px;
     width: 100%;
     box-sizing: border-box;
@@ -250,8 +217,7 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
     transition: background-color 0.3s;
 }
 
-/* ---------------------------------------------------------------------- */
-/* 4. Diseño Responsivo: Media Query para dispositivos pequeños (hasta 768px) [30, 43] */
+/* --- Media Queries (Adaptabilidad) --- */
 @media (max-width: 768px) {
     
     /* Adaptación de la navegación para móviles (opcional: a columna) */
@@ -260,18 +226,14 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
         gap: 10px;
     }
     
-    /* Adaptación de la sección Reseñas (Grid) a una sola columna [30, 44] */
     .reseñas-grid {
-        grid-template-columns: 1fr; /* Una sola columna para móviles */
+        grid-template-columns: 1fr;
     }
 
-    /* Adaptación del formulario de Contacto [45, 46] */
     .contacto-form {
-        padding: 10px; /* Ajusta el padding general del formulario [46] */
+        padding: 10px;
     }
     
-    /* Los campos ya están configurados para 100% de ancho, pero se reitera
-       la importancia de asegurar la separación [46] */
     .contacto-form input,
     .contacto-form textarea {
         width: 100%; 
@@ -279,8 +241,6 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
     }
 }
 
-/* ---------------------------------------------------------------------- */
-/* Media Query para Tabletas (Ejemplo: 600px a 991px) [44] */
 @media (min-width: 600px) and (max-width: 991px) {
     /* Adaptación de la sección Reseñas (Grid) a dos columnas para tabletas */
     .reseñas-grid {
@@ -291,14 +251,14 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
 #carrito {
   position: fixed;
   bottom: 20px;
-  right: 20px;      /* Cámbialo a left:20px si lo querés a la izquierda */
+  right: 20px;
   width: 260px;
   background-color: white;
   border: 2px solid #444;
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 0 12px rgba(0,0,0,0.3);
-  z-index: 9999;     /* Siempre encima */
+  z-index: 9999;
 }
 
 /* Título más pequeño */
@@ -309,7 +269,7 @@ background: linear-gradient(135deg, rgba(33, 97, 60, 0.6) 10%, rgba(27, 77, 48, 
 
 /* Lista del carrito */
 #lista-carrito {
-  max-height: 200px; /* evita que se desborde */
+  max-height: 200px;
   overflow-y: auto;
   list-style: none;
   padding: 0;

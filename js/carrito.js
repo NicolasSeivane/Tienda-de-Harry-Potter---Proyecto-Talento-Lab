@@ -20,26 +20,26 @@ function activarBotonesAgregar() {
 
 
 function eliminarProducto(event) {
-    const boton = event.target;
-    const productoId = boton.getAttribute('producto-id');
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito = carrito.filter(p => p.id !== productoId);
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    cargarCarrito();
+  const boton = event.target;
+  const productoId = boton.getAttribute('producto-id');
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  carrito = carrito.filter(p => p.id !== productoId);
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  cargarCarrito();
 }
 
 function activarBotonesEliminar() {
   const botones = document.getElementsByClassName('eliminar-carrito');
   for (let i = 0; i < botones.length; i++) {
-    botones[i].addEventListener('click', function(event) {
+    botones[i].addEventListener('click', function (event) {
       const boton = event.target;
       const productoId = boton.getAttribute('producto-id');
 
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito = carrito.filter(p => p.id !== productoId);
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    cargarCarrito();
-  });
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito = carrito.filter(p => p.id !== productoId);
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      cargarCarrito();
+    });
   }
 }
 
@@ -55,7 +55,7 @@ function agregarProducto(event) {
 
   let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-  // ¿Existe ya el producto?
+  // Verificamos si el producto ya se encuentra en el carrito para incrementar la cantidad
   const existente = carrito.find(p => p.id === producto.id);
 
   if (existente) {
@@ -100,7 +100,7 @@ function cargarCarrito() {
 
   totalCarrito.innerHTML = `<strong>Total:</strong> $${total}`;
 
-  // Eventos para + y -
+  // Asignación de manejadores de eventos para los controles de cantidad y eliminación
   activarBotonesCantidad();
   activarBotonesEliminar();
 }

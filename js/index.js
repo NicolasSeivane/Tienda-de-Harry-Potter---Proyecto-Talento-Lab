@@ -1,15 +1,15 @@
-// Seleccionamos los contenedores
+// Selección de elementos del DOM
 const productsContainer = document.querySelector(".seccion-productos");
 const commentsContainer = document.querySelector(".seccion-reseñas");
 
-// Llamamos a la API y procesamos los datos
+// Carga dinámica de productos y reseñas desde el archivo JSON
 fetch("productos.json")
   .then(response => response.json())
   .then(data => {
-    // Tomamos 4 productos con el método slice.
+    // Limitamos la cantidad de productos a mostrar
     const productos = data.productos.slice(0, 8);
 
-    // Renderizamos los productos
+    // Generación del HTML para las tarjetas de productos
     let productsHTML = "<h2>Nuestra Magia</h2> <div class=\"productos-container\">";
     for (let i = 0; i < productos.length; i++) {
       const prod = productos[i];
@@ -20,7 +20,7 @@ fetch("productos.json")
           <p>${prod.descripcion.slice(0, 50)}</p>
           <h3>$${prod.precio}</h3>
 
-          <div class="card-footer"><button class="agregar-carrito"producto-id="${prod.id}"producto-nombre="${prod.nombre}"producto-precio="${prod.precio}">Agregar al Carrito</button>
+          <div class="card-footer"><button class="agregar-carrito"producto-id="${prod.id}"producto-nombre="${prod.nombre}"producto-precio="${prod.precio}">Agregar al Caldero</button>
           </div>
         </article>
       `;
@@ -29,10 +29,10 @@ fetch("productos.json")
     activarBotonesAgregar();
 
 
-  // Tomamos 3 reseñas
+    // Carga de reseñas de clientes
     const reseñas = data.reseñas.slice(0, 4);
 
-    // Renderizamos las reseñas
+    // Generación del HTML para la cuadrícula de reseñas
     let reviewsHTML = "<h2>Reseñas de Clientes</h2><div class=\"reseñas-grid\">";
     for (let i = 0; i < reseñas.length; i++) {
       const reseña = reseñas[i];
